@@ -1,22 +1,20 @@
-# this is for pythonchallenge chapter 2
+# this is for pythonchallenge chapter 2.1
 
+from string import maketrans
 import string
 
-def translate2(text):
-    i=0
-    while i<num:        
-        if text[i] in letter:
-            a=text[i]
-            b=letter.index(a)
-            c=(b+2)%26           
-            text[i]=letter[c]
-        i+=1
-    return ''.join(text)
+def fix2(words):
+    text=string.ascii_lowercase
+    text2=text[2:]+'ab'
+    temp=maketrans(text,text2)
+    result=words.translate(temp)
+    return result
+words="g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
 
-            
-text=raw_input('paste the letter: ')
-num=len(text)
-text=list(text)
-letter=string.ascii_lowercase
+print fix2(words)
 
-print translate2(text)
+
+
+
+
+
